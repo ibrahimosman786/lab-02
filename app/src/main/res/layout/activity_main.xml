@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- App Icon -->
+    <ImageView
+        android:id="@+id/app_icon"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@android:drawable/ic_dialog_map"
+        android:contentDescription="City Icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <!-- Welcome Title -->
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to ListyCity"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/app_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/subtitle_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add, remove, and manage your favorite cities"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/title_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Guideline to split buttons -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_half"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <!-- ADD CITY -->
+    <Button
+        android:id="@+id/btn_add_city"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ADD CITY"
+        app:layout_constraintTop_toBottomOf="@id/subtitle_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guide_half"
+        android:layout_margin="12dp" />
+
+    <!-- DELETE CITY -->
+    <Button
+        android:id="@+id/btn_delete_city"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="DELETE CITY"
+        app:layout_constraintTop_toBottomOf="@id/subtitle_text"
+        app:layout_constraintStart_toEndOf="@id/guide_half"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="12dp" />
+
+    <!-- City List -->
+    <ListView
+        android:id="@+id/city_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="12dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_add_city"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
