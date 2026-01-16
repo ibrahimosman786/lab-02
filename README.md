@@ -22,6 +22,9 @@ The focus of this lab is on practicing:
 - `ListView` and `ArrayAdapter`
 - Event handling using `OnClickListener`
 
+- <img width="372" height="743" alt="Screenshot 2026-01-16 at 3 58 22 PM" src="https://github.com/user-attachments/assets/43e80fed-ed94-4e1f-a357-f6a36cfc7354" />
+
+
 ---
 
 ## References and Resources
